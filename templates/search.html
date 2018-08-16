@@ -1,6 +1,10 @@
 <div class="searchcontainer">
 <form id="searchform" action="/grep/" method="POST">
 
+  <p>Filter log file starting with: 
+    <input name="logfilestartingwith" type="text" class="searchnumfield" value=""/>
+  </p>
+	
   <p>Grep search context before: 
     <input name="grepbefore" type="text" class="searchnumfield" value="{{ session['searchbeforecontext'] }}"/>
     and after: 
