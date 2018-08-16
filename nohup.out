@@ -1,0 +1,83 @@
+searchbeforecontext: 5
+directories: ['/var/log/studie', '/var/log/studie/archived']
+extensions: ['log', 'out']
+grepnumlines: 500
+searchaftercontext: 5
+ * Serving Flask app "logagent" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://127.0.0.1:9001/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 220-951-028
+searchbeforecontext: 5
+directories: ['/var/log/studie', '/var/log/studie/archived']
+extensions: ['log', 'out']
+grepnumlines: 500
+searchaftercontext: 5
+searchbeforecontext: 5
+directories: ['/var/log/studie', '/var/log/studie/archived']
+extensions: ['log', 'out']
+grepnumlines: 500
+searchaftercontext: 5
+ * Serving Flask app "logagent" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://127.0.0.1:9001/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 220-951-028
+127.0.0.1 - - [16/Aug/2018 12:27:28] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2018 12:27:34] "GET /head/studie.log_69e1d0f0-a18a-11e8-8cc8-001c42c0c8d1/500 HTTP/1.0" 301 -
+127.0.0.1 - - [16/Aug/2018 12:27:35] "GET /head/studie.log_69e1d0f0-a18a-11e8-8cc8-001c42c0c8d1/500/ HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2018 12:27:38] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2018 12:27:40] "GET /tail/studie.log_6fa6aef2-a18a-11e8-8cc8-001c42c0c8d1/500 HTTP/1.0" 301 -
+127.0.0.1 - - [16/Aug/2018 12:27:40] "GET /tail/studie.log_6fa6aef2-a18a-11e8-8cc8-001c42c0c8d1/500/ HTTP/1.0" 200 -
+searchbeforecontext: 5
+directories: ['/var/log/studie', '/var/log/studie/archived']
+extensions: ['log', 'out']
+grepnumlines: 500
+searchaftercontext: 5
+ * Serving Flask app "logagent" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://127.0.0.1:9001/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 220-951-028
+searchbeforecontext: 5
+directories: ['/var/log/studie', '/var/log/studie/archived']
+extensions: ['log', 'out']
+grepnumlines: 500
+searchaftercontext: 5
+searchbeforecontext: 5
+directories: ['/var/log/studie', '/var/log/studie/archived']
+extensions: ['log', 'out']
+grepnumlines: 500
+searchaftercontext: 5
+ * Serving Flask app "logagent" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
+ * Running on http://127.0.0.1:9001/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 220-951-028
+127.0.0.1 - - [16/Aug/2018 13:25:56] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2018 13:26:00] "GET /tail/studie.log_948053ce-a192-11e8-8cc8-001c42c0c8d1/500 HTTP/1.0" 301 -
+127.0.0.1 - - [16/Aug/2018 13:26:01] "GET /tail/studie.log_948053ce-a192-11e8-8cc8-001c42c0c8d1/500/ HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2018 13:26:21] "GET / HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2018 13:33:09] "POST /grep/ HTTP/1.0" 200 -
+127.0.0.1 - - [16/Aug/2018 13:44:50] "GET / HTTP/1.0" 200 -
+searchbeforecontext: 5
+directories: ['/var/log/studie', '/var/log/studie/archived']
+extensions: ['log', 'out']
+grepnumlines: 500
+searchaftercontext: 5
