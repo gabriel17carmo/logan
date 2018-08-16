@@ -1,13 +1,12 @@
-grepnumlines: 250
-searchbeforecontext: 2
-searchaftercontext: 2
+grepnumlines: 500
+searchbeforecontext: 5
+searchaftercontext: 5
 
 extensions:
  - log
  - out
 
 directories:
- - /var/log
- - /Users/jonathan/temp
-
+ - /var/log/studie
+ - /var/log/studie/archived
  
