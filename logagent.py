@@ -11,6 +11,8 @@ import sys
 from flask import Flask, render_template
 from flask import request, session
 from flask import make_response
+from ansi2html import Ansi2HTMLConverter
+
 
 # -*- coding: utf-8 -*-
 """
@@ -70,6 +72,7 @@ def process_file(fn, filename, numlines):
                         # pass generic function name
                         lines = fn(logfile, numlines)
                         content = '<br>'.join(lines)
+			content = Ansi2HTMLConverter().convert(content).replace('&lt;', '<').replace('&gt;', '>')
                         return render_template('content.html', content=content)
                 finally:
                         logfile.close()
@@ -176,8 +179,11 @@ def grep():
                 return render_template('list.html', error='No results found for search expression')
 
         expression = expression.decode('utf-8')
+        highlightedoutput = output.decode('utf-8')
+        highlightedoutput = Ansi2HTMLConverter().convert(highlightedoutput).replace('&lt;', '<').replace('&gt;', '>')
+        
         highlight = '<span class="highlightmatch">' + expression + '</span>'
-        highlightedoutput = output.decode('utf-8').replace(expression, highlight)
+        highlightedoutput = highlightedoutput.replace(expression, highlight)
 
         return render_template('results.html', output=highlightedoutput,filepaths=filepaths,expression=expression)
 
