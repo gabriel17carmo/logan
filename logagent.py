@@ -81,7 +81,7 @@ def process_file(fn, filename, numlines):
                 session['content'] = 'Refusing to process file'
                 return resp
 
-def search_for_expression(output, filepaths, validfiles, expression, grepbefore, grepafter):
+def search_for_expression(output, filepaths, validfiles, expression, grepbefore, grepafter, logfilestartingwith):
         """Carry out search for expression (using grep context) on validfiles returning matching files as output"""
         options = grin.Options()
         options['before_context'] = int(grepbefore)
@@ -99,6 +99,7 @@ def search_for_expression(output, filepaths, validfiles, expression, grepbefore,
 
         for file in validfiles:
                 filepath = validfiles.get(file)[0]
+		if filepath.startswith(logfilestartingwith) continue
                 report = grindef.grep_a_file(filepath)
                 if report:
 
@@ -164,16 +165,7 @@ def grep():
         output = ""
         filepaths = []
 
-        output += search_for_expression(output, filepaths, session.get('validfiles'), expression, request.form['grepbefore'], request.form['grepafter'])
-
-        if not output:
-                return render_template('list.html', error='No results found for search expression')
-
-        expression = request.form['expression'].strip()
-        output = ""
-        filepaths = []
-
-        output += search_for_expression(output, filepaths, session.get('validfiles'), expression, request.form['grepbefore'], request.form['grepafter'])
+        output += search_for_expression(output, filepaths, session.get('validfiles'), expression, request.form['grepbefore'], request.form['grepafter'], request.form['logfilestartingwith'])
 
         if not output:
                 return render_template('list.html', error='No results found for search expression')
