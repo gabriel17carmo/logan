@@ -99,7 +99,8 @@ def search_for_expression(output, filepaths, validfiles, expression, grepbefore,
 
         for file in validfiles:
                 filepath = validfiles.get(file)[0]
-		if filepath.startswith(logfilestartingwith) continue
+		if filepath.startswith(logfilestartingwith)
+			continue
                 report = grindef.grep_a_file(filepath)
                 if report:
 
